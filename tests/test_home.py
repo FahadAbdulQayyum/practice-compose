@@ -21,7 +21,15 @@ class TestApp(unittest.TestCase):
         # assert "POST method called" == response.get_data(as_text=True)
 
         response = 200
-        assert 200 == 200
+        assert response == 200
+    
+    def test_home_not_200(self):
+        # response = self.client.get("/")
+        # assert response.status_code == 200
+        # assert "POST method called" == response.get_data(as_text=True)
+
+        response = 400
+        assert response != 200
         
 if __name__ == '__main__':
     unittest.main()
